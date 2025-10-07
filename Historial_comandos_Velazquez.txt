@@ -1,0 +1,470 @@
+pwd
+ls
+ls -l
+ls -a
+ls -la
+cd
+cd /
+cd etc /
+cd etc/
+cat passwd
+pwd /etc
+pwd
+man man
+man pwd
+y --help
+--help
+useradd --help
+pwd
+cd .
+cd ..
+cd
+exit
+history
+cd etc/
+ext
+exit
+pwd
+man ls
+exit
+ls -l
+cat README
+cat << FIN
+linea 1
+linea 2
+linea 3
+linea 4
+FIN
+
+cat << FIN > clase3.txt
+lnea 1
+linea 2
+linea 3
+linea 4
+FIN
+
+ls
+cat clase3.txt 
+cat << FIN > clase3.txt
+linea 5
+linea 6
+FIN
+
+ls
+cat clase3.txt
+cat << FIN >> clase3.txt
+linena 7
+linea 8
+FN
+FIN
+
+ls
+cat clase3.txt
+cat << FIN
+linea 1
+linea 2
+FIN
+
+man bc
+bc << 1
+1
+
+bc << 1+2
+1+2
+
+bc <<< 1+2
+bc <<< 4*3
+ls
+cat clase3.txt
+man tac
+tac clase3.txt
+man wc
+ls
+man echo
+echo "Hola mundo" | wc
+cat clase3.txt | wc
+man wc
+cat clase3.txt | wc -w
+man tail
+tail -n1 clase3.txt
+exit
+mkdir clases
+ls
+cat << FIN > Clase4.txt
+linea 1
+linea 2
+FIN
+
+ls
+mv Clase4.txt clases/
+s
+ls
+cd clases/
+ls
+cd ..
+cat Clase4.txt
+rm -i Clase4.txt
+ls
+cd clases/
+rm -i Clase4.txt
+ls
+cd ..
+cd etc/
+ls
+cd etc
+cd etc /
+cd etc/
+cd /etc
+man useradd
+sudo useradd desarrollador1
+cat passwd
+cd /home/
+ls
+sudo userdel desarrollador1
+cat /etc/passwd
+sudo useradd -m -c "Juan Perez" desarrollador1
+ls
+cat /etc/passwd
+sudo passwd desarrollador1
+man usermod
+sude usermod -s /bin/bash desarrollador1
+sudo usermod -s /bin/bash desarrollador1
+su desarrollador1/
+sudo cat /etc/shadow
+sudo grep desarrollador1 /etc/shadow
+sudo grep desarrollador1 /etc/shadow | awk -F ':' '{print$2}'
+sudo useradd -m -s /bin/bash -c "Marcos Gonzalez" -p $(sudo grep desarrollador1 /etc/shadow | awk -F ':' '{print$2}')
+sudo useradd -m -s /bin/bash -c "Marcos Gonzalez" -p "$(sudo grep desarrollador1 /etc/shadow | awk -F ':' '{print$2}')" desarrollador2
+ls
+sudo cat /etc/shadow
+sudo groupadd desarrolladores
+sudo usermod -G desarrolladores desarrollador1
+sudo usermod -G desarrollo desarrollador1
+sudo usermod -aG desarrolladores desarrollador1
+cat /etc/group
+man usermod
+sudo useradd -m -s /bin/bash desarrollador
+sudo useradd -m -s /bin/bash -G desarrolladores desarrollador3
+cat /etc/group
+sudo useradd -m -s /bin/bash -g desarrolladores desarrollador4
+cat /etc/group
+cat /etc/passwd
+sudo useradd -m -s /bin/bash -g losdesa desarrollador5
+cat /etc/group
+cat /etc/passwd
+sudo useradd -m -s /bin/bash -G losdesa desarrollador5
+cat /etc/passwd
+ls
+sudo useradd -s /bin/bash -d /home/desarrollador1 desarrollador5
+cat /etc/passwd
+sudo useradd -s /bin/bash -d /home/pepe desarrollador5
+cat /etc/passwd
+sudo useradd -s /bin/bash -d /home/pepe desarrollador6
+ls
+ls -l
+cat /etc/group
+ls -l
+cd ubuntu/
+ls -l
+pwd
+cd ubuntu/
+cat << FIN >> ejemplo.txt
+hola
+FIN
+
+ls -l
+cd vagrant
+cd home/vagrant/
+cd hom/
+cd home/
+cd /home
+cd /vagrant
+cd vagrant/
+cd /home
+pwd
+cd vagrant/
+pwd
+cat << FIN >> ejemplo.txt
+hola
+FIN
+
+ls -l
+man chmod
+chmod 644 ejemplo.txt
+ls -l
+cd /home/desarrollador4
+ls -l
+chmod 755 vagrant
+chmod 755 vagrant/
+chmod 755 /vagrant
+chmod 755 vagrant
+pwd
+ls -l
+cat etc/group
+cat /etc/group
+groupadd borrar
+exit
+su desarrollador1
+vagrant status
+vagrant halt
+pwd
+su desarrollador1
+su desarrollador2
+su desarrollador1
+pwd
+ssh-keygen
+cd
+pwd
+ls -la
+cd .ssh
+ls -la
+cd
+vagrant halt
+cd
+cd ..
+pwd
+cd
+cd .
+pwd
+vagrant halt
+halt
+exit
+pwd
+cd
+cd repogit
+cd
+ssh-keygen
+pwd
+ls -la
+cd .ssh
+ls -la
+cat id_rsa.pub
+cd
+git --version
+git clone git@github.com:agustina-velazquez/TP_AySO.git
+cp README miercoles4/
+cp README
+cd
+cd TP_AySO/
+pwd
+ls -l
+cat /etc/mtab
+man grep
+pwd
+ls -l
+ls -la
+cd /etc
+cat mtab
+cd
+grep SYSFS /etc/mtab
+grep home_url /etc/os-release
+cd /etc
+grep SYSFS /mtab
+cd /mtab
+cd mtab
+cd
+pwd
+cd .
+cd ..
+pwd
+cd vagrant
+pwd
+man grep
+grep SYSFS /etc/mtab
+grep home_url /etc/os-release
+grep -i Sysfs /etc/mtab
+man grep
+grep -i Sysfs /etc/mtab > datos_sys.txt
+whoami
+echo "Usuario=$(whoami) > datos_usuario.txt
+
+ls
+cd repogit
+cd TP_AySo
+ls
+cd
+cd TP_AySO/
+grep -i HOME_URL /etc/os-release
+grep home_url /etc/os-release
+whoami
+ls
+echo "Usuario=$(whoami)" > datos_usuario.txt
+ls
+git add .
+git config --global user.email "velazquezagus0@gmaail.com"
+gt config --global user.name "agustina-velazquez"
+git config --global user.name "agustina-velazquez"
+git commit -m "ADD: agregando 1er ejercicio sobre datos_usuarios.txt"
+git status
+git push
+man grep
+man awk
+grep "vagrant" /etc/passwd | awk -f: "{print$5, $6}>> datos_usuario.txt
+
+git add .
+git config --global user.mail "velazquezagus00@gmailc.com"
+git config --global user.email "velazquezagus00@gmailc.com"
+git config --global user.name "agustina-velazquez"
+git commit -m "feat: Añadiendo información del Usuario"
+git push
+git config --global user.email "velazquezagus00@gmail.com"
+git config --global user.name "agustina-velazquez"
+git commit -m "feat: Añadiendo información del Usuario"
+git push
+ls
+cls
+ls
+cat datos_usuario.txt
+cd /etc/passwd
+cd
+ls
+cd /etc/passwd
+cd /repogit
+ls -l
+cd repogit
+cd TPA_AySO
+ls
+ls -l
+mv TP_AySO repogit
+mv TP_AySO /repogit
+cd
+mv TP_AySO repogit
+ls -l
+ls
+cd repogit
+ls
+ls -l
+cd TP_AySO/
+ls -l
+ls -la
+cd /etc/passwd
+cd
+cd /etc/passwd
+ls
+cd /etc
+cd /passwd
+cd passwd
+ls
+cat passwd
+cd
+grep vagrant
+grep vagrant /etc/passwd
+grep vagrant /etc/passwd | awk -F "{print$5, $6} >> datos_usuario.txt
+grep vagrant /etc/passwd | awk -F "{print$5, $6} >> /repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd
+grep vagrant /etc/passwd | awk -F "{print$5, $6} >> /repogit/TP_AySO/datos_usuario.txt
+
+
+
+
+grep vagrant /etc/passwd | awk -F "{print$5, $6} > > /repogit/TP_AySO/datos_usuario.txt
+cd /repogit
+cd repogit
+cd TP_AySO/
+cd
+cd etc
+grep vagrant /etc/passwd | awk -F "{print$5, $6} >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F "{print$5, $6} >> repogit/TP_AySO/datos_usuario.txt/
+grep vagrant /etc/passwd | awk -F "{print$5, $6}" >> repogit/TP_AySO/datos_usuario.txt/
+grep vagrant /etc/passwd | awk -F "{print$5, $6}" >> repogit/TP_AySO/datos_usuario.txt
+man awk
+grep vagrant /etc/passwd | awk -f ":" "{print$5, $6}" >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -f  "{print$5, $6}" >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F:  "{print $5, $6}" >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F:  "{print $5}" >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F:  "{print $6}" >> repogit/TP_AySO/datos_usuario.txt
+cd repogit/passwd
+cd repogit/passwd/
+cd repogit
+cd passwd
+cd TP_AySO/
+ls
+cat datos_usuario.txt 
+grep vagrant /etc/passwd | awk -F ":"  "{print $8}" >> repogit/TP_AySO/datos_usuario.txt
+cd
+grep vagrant /etc/passwd | awk -F ":"  "{print $8}" >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F ":"  "{print $10}" >> repogit/TP_AySO/datos_usuario.txt
+cat datos_usuario.txt 
+cd repogit/TP_AySO/
+cat datos_usuario.txt 
+cd
+grep vagrant /etc/passwd | awk -f "{print $9}" >> repogit/TP_AySO/datos_usuario.txt
+man awk
+grep vagrant /etc/passwd | awk -f "{print$2}" >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F ":" "{print$5}" >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F ":" "{print$6}" >> repogit/TP_AySO/datos_usuario.txt
+cd repogit/TP_AySO/
+cat datos_usuario.txt 
+grep vagrant /etc/passwd | awk -F: "{print$5}" >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F ":" "{print$5}" >> repogit/TP_AySO/datos_usuario.txt
+cd
+grep vagrant /etc/passwd | awk -F ":" "{print$5}" >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F ":" "{print$6}" >> repogit/TP_AySO/datos_usuario.txt
+cd repogit/TP_AySO/
+cat datos_usuario.txt 
+cd
+grep vagrant /etc/passwd | awk -F ":" "{print"comentario="$5}" >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F ":" "{print"home="$6}" >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F ":" "{print "home=" $6}" >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F ":" '{print "home=" $6}' >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F ":" '{print"comentario="$5}' >> repogit/TP_AySO/datos_usuario.txt
+cd repogit/TP_AySO/
+cat datos_usuario.txt 
+echo "Usuario=$(whoami)" > datos_usuario.txt
+cat datos_usuario.txt 
+add .
+git config --global user.email "velazquezagus00@gmaail.com"
+git config --global user.name "agustina-velazquez"
+git commit -m "ADD: agregando 1er ejercicio sobre datos_usuarios.txt"
+git push
+cat datos_usuario.txt 
+cd
+grep vagrant /etc/passwd | awk -F ":" '{print"comentario="$5}' >> repogit/TP_AySO/datos_usuario.txt
+grep vagrant /etc/passwd | awk -F ":" '{print "home=" $6}' >> repogit/TP_AySO/datos_usuario.txt
+cd repogit/TP_AySO/
+add .
+git config --global user.email "velazquezagus00@gmaail.com"
+git config --global user.name "agustina-velazquez"
+git commit -m "feat: Añadiendo información del Usuario"
+git add .
+git config --global user.email "velazquezagus00@gmaail.com"
+git config --global user.name "agustina-velazquez"
+git commit -m "feat: Añadiendo información del Usuario"
+git push
+ls
+cat << FIN > README.md
+Alumna: Agustina Velázquez
+División: 115
+
+cat << FIN >> README.md
+Alumna: Agustina Velázquez
+División: 115
+Turno: Mañana
+FIN
+
+git add README.md datos_usuario.txt 
+git commit -m "ADD: Añadiendo Readme y datos del usuario"
+git push
+cat README.md 
+cd
+pwd
+mkdir -p TP1/{arquitectura/Clase{1..5},so/{Clase6,Clase{1..5}}}
+tree TP1
+sudo apt install tree
+tree TP1
+cat << FIN > script_dir.sh
+mkdir -p TP1/{arquitectura/Clase{1..5},so/{Clase6,Clase{1..5}}}
+FIN
+
+chmod +x script_dir.sh 
+./script_dir.sh 
+tree TP1
+./script_dir.sh 
+mv script_dir.sh repogit/TP_AySO/
+cd repogit/
+cd TP_AySO/
+ls
+git add .
+git commit -m "ADD: Añadiendo script"
+git push
+history -a
