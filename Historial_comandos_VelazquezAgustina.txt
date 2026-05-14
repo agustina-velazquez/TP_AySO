@@ -1,0 +1,104 @@
+ls -la
+cd .ssh/
+ls -la
+cd ..
+ssh-keygen
+cd .ssh/
+ls -la
+cat id_rsa.pub
+cd ..
+sudo apt install git
+git --version
+git clone git@github.com:agustina-velazquez/TP_AySO.git
+ls -la
+cd repogit
+ls -la
+git clone git@github.com:agustina-velazquez/TP_AySO.git
+ls -la
+cd TP_AySO/
+pwd
+man grepp
+man grep
+grep UBUNTU  /etc/passwd
+grep ubuntu /etc/passwd
+grep -i Ubuntu /etc/passwd
+grep -i Ubuntu /etc/passwd | awk -F ':' '{print$2}' > datos_usuario.txt
+ls -l
+whoami
+echo "Usuario=$(whoami)" >> datos_usuario.txt
+cat datos_usuario.txt 
+git add .
+git config --global user.email "velazquezagus00@gmail.com" ; git config --global user.name "agustina-velazquez"
+git commit -m "ADD: agregando 1er ejercicio sobre datos_usuarios.txt"
+git status
+cat /proc/cpuinfo 
+grep -i "model name" /proc/cpuinfo 
+grep -i "model name" /proc/cpuinfo | tail -n1 > info_pc.txt
+ls -l
+cat info_pc.txt 
+git add .
+git commit -m "feat: Añadiendo informacion de CPU"
+man grep
+cat /etc/passwd
+grep -v root /etc/passwd
+man sort
+grep -v nologin /etc/passwd | head | sort -k 7 > lista_ordenada
+ls -l
+cat lista_ordenada 
+grep -v nologin /etc/passwd
+git add .
+git commit -m "ADD: Listadoo de usuarios ordenada"
+cat << FIN >> README.md 
+Alumno: Agustina Velazquez
+División: 116
+Turno: Mañana
+FIN
+
+cat README.md 
+add .
+git add .
+git commit -m "feat: Añadiendo nueva informacion al README"
+sudo apt install tree
+snap install tree
+sudo snap install tree
+mkdir -p TP1/{{arquitectura,so}/Clase{1..5},so/Clase6}
+tree TP1/
+cat /etc/passwd
+vim script_dir.sh
+cat script_dir.sh 
+./script_dir.sh
+chmod +x script_dir.sh 
+./script_dir.sh
+ls -l
+tree TP1/
+git add .
+git commit -m "ADD: Añadiendoo script"
+git push
+git status
+git push
+pwd
+ls -la
+cat .
+cd .
+cat README.md 
+git remote -v
+ls -l
+cd repogit/
+ls -l
+cd TP_AySO/
+ls -l
+git status
+git push
+ping google.com
+git push
+git add .
+git push
+cd repogit/
+cd TP_AySO/
+ls -l
+git status
+git push
+pwd
+ls -la
+history -a $HOME/.bash_history
+history -a
